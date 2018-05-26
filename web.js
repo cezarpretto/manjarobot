@@ -5,7 +5,7 @@ setInterval(function() {
   console.log("mensagem enviada!")
 }, 250000);
 
-handle = (req, res) -> res.end "hit"
+handle = (req, res) => res.end "hit"
 
 server = http.createServer handle
 
