@@ -1,12 +1,22 @@
+var express = require('express')
 var http = require("http");
+var packageInfo = require('./package.json')
+
+var app = express()
+
+app.get('/', function (req, res) {
+  res.json({ version: packageInfo.version })
+})
 
 setInterval(function() {
   http.get("http://manjarogroupbot.herokuapp.com")
-  console.log("mensagem enviada!")
-}, 250000);
+  console.log("mandei mensagem")
+}, 300000)
 
-handle = (req, res) => res.end "hit"
 
-server = http.createServer handle
+var server = app.listen(process.env.PORT|| 5000, function () {
+  var host = server.address().address
+  var port = server.address().port
 
-server.listen process.env.PORT || 5000
+  console.log('Web server started at http://%s:%s', host, port)
+})
