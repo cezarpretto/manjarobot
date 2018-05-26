@@ -1,4 +1,3 @@
 module.exports = {
-    token: '568903182:AAFviumx4HWHOuCAHuvMv2s7MQT50cwXV6o',
-    chatID: '-g269263300'
+    token: '614598096:AAET4C9MomWzcFBiETK5wpZ1Pi6phXSU3ok'
 }
