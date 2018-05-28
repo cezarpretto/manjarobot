@@ -11,7 +11,7 @@ app.get('/', function (req, res) {
 setInterval(function() {
   http.get("http://manjarogroupbot.herokuapp.com")
   console.log("mandei mensagem")
-}, 300000)
+}, 250000)
 
 
 var server = app.listen(process.env.PORT|| 5000, function () {

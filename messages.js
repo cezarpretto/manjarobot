@@ -14,5 +14,10 @@ module.exports = {
   welcome: 'Bem vindo ao Manjaro Brasil!! \nConte-nos, que interface gráfica você usa ? \nUse /help ou /menu tenha ajuda do nosso bot :)',
   by: 'Até a próxima!',
   before: 'você precisa criar uma conversa privada comigo antes disso ;)',
-  form: ' https://goo.gl/forms/ErIdRo993NXiXQmp2'
+  form: ' https://goo.gl/forms/ErIdRo993NXiXQmp2',
+  elogioGrupo: 'Elogios só podem ser enviados de dentro do grupo ;)',
+  autoElogio: 'Elogiar a si mesmo?! :O',
+  enviaElogio: 'Elogio Enviado! :D',
+  semElogio: ' ainda não possui elogios',
+  contaElogio: 'Quantidade de elogios de '
 }
