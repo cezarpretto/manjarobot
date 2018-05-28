@@ -157,7 +157,7 @@ bot.onText(/\/elogiar (.+)/, (msg, match) => {
       bot.sendMessage(chatID, message.autoElogio)
     } else {
       commend(user)
-      bot.sendMessage(chatID, message.autoElogio)
+      bot.sendMessage(chatID, message.enviaElogio)
     }
   }
 })
