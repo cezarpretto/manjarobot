@@ -247,6 +247,8 @@ function bestCommends(chatID) {
       var text = 'Rank\n'
       for (let index = 0; index < docs.length; index++) {
         const element = docs[index]
+        console.log(element)
+        
         text += element.nick + ': ' + element.commend + ' elogios.\n'
       }
       bot.sendMessage(chatID, text, { parse_mode: 'Markdown' })
