@@ -253,7 +253,7 @@ function bestCommends(chatID) {
         console.log(text)
         
       }
-      bot.sendMessage(chatID, text, { parse_mode: 'Markdown' })
+      bot.sendMessage(chatID, String(text), { parse_mode: 'Markdown' })
       client.close()
     })
   })
