@@ -21,5 +21,5 @@ module.exports = {
   enviaElogio: 'Elogio Enviado! :D',
   semElogio: ' ainda não possui elogios',
   contaElogio: 'Quantidade de elogios de ',
-  botComandos: '/regras   \n /help \n /steam \n /instalacao \n /rollingrelease \n /rank \n /forum \n /kerneldriver \n /gnome \n /grubrescue \n /mirror \n /comandosbasicos \n /awesomelinux \n /arch'
+  botComandos: '/regras   \n /help \n /steam \n /espaco \n /instalacao \n /rollingrelease \n /rank \n /forum \n /kerneldriver \n /gnome \n /grubrescue \n /mirror \n /comandosbasicos \n /awesomelinux \n /arch'
 }
