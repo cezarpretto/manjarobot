@@ -124,6 +124,7 @@ bot.onText(/\/rollingrelease/, (msg, match) => {
 })
 
 bot.onText(/\/menu/, (msg) => {
+/*
   const opts = {
     reply_markup: JSON.stringify({
       resize_keyboard: true,
@@ -139,7 +140,17 @@ bot.onText(/\/menu/, (msg) => {
         ['/awesomelinux', '/arch']
       ]
     })
-  }
+  }*/
+  var opts = {
+		"reply_to_message_id" : msg.message_id,
+		"selective" : true,
+		"reply_markup": JSON.stringify({
+			"keyboard": [
+        ['teste']
+      ]
+		})
+	}
+
   const userID = msg.from.id
   bot.sendMessage(msg.chat.id, 'Escolha uma Opção', opts).catch((error) => { bot.sendMessage(msg.chat.id, 'Ei ' + msg.from.first_name + ', ' + message.before) })
 })
