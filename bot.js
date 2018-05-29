@@ -127,6 +127,7 @@ bot.onText(/\/menu/, (msg) => {
   const opts = {
     reply_markup: JSON.stringify({
       resize_keyboard: true,
+      selective : true,
       one_time_keyboard: true,
       keyboard: [
         ['/regras', '/help', '/steam'],
