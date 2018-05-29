@@ -57,7 +57,7 @@ bot.onText(/\/regras/, (msg) => {
   bot.sendMessage(msg.chat.id, message.rules, { parse_mode: 'Markdown' }).catch((error) => { bot.sendMessage(msg.chat.id, 'Ei ' + msg.from.first_name + ', ' + message.before) })
 })
 
-bot.onText(/\/comandos/, (msg) => {
+bot.onText(/\/botcomandos/, (msg) => {
   const userID = msg.from.id
   const comandos = '/regras \n /help \n /steam \n /instalacao \n /rollingrelease \n /rank \n /forum \n /kerneldriver \n /gnome \n /grubrescue \n /mirror \n /comandosbasicos \n /awesomelinux \n /arch'
   bot.sendMessage(msg.chat.id, message.rules, { parse_mode: 'Markdown' }).catch((error) => { bot.sendMessage(msg.chat.id, 'Ei ' + msg.from.first_name + ', ' + message.before) })
