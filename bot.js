@@ -24,7 +24,6 @@ bot.onText(/\/help/, (msg) => {
 })
 
 bot.onText(/\/forum/, (msg) => {
-  const userID = msg.from.id
   bot.sendMessage(msg.chat.id, message.forumLink, { parse_mode: 'Markdown' }).catch((error) => { bot.sendMessage(msg.chat.id, 'Ei ' + msg.from.first_name + ', ' + message.before) })
 })
 
@@ -192,7 +191,7 @@ function commend(nick) {
   MongoClient.connect(settings.database, function (err, client) {
     assert.equal(null, err);
     const db = client.db(settings.dbName)
-    const collection = db.collection('avaliacao');
+    const collection = db.collection('avaliacao')
     // Procura ver se o usuário já foi elogiado alguma vez
     collection.find({ 'nick': nick }).toArray(function (err, docs) {
       assert.equal(err, null)
@@ -221,7 +220,7 @@ function countCommends(nick, chatID) {
     assert.equal(null, err);
     console.log("Connected successfully to server")
     const db = client.db(settings.dbName)
-    const collection = db.collection('avaliacao');
+    const collection = db.collection('avaliacao')
     // Procura ver se o usuário já foi elogiado alguma vez
     collection.find({ 'nick': nick }).toArray(function (err, docs) {
       assert.equal(err, null)
@@ -238,7 +237,7 @@ function countCommends(nick, chatID) {
 //melhores avaliações
 function bestCommends(chatID) {
   MongoClient.connect(settings.database, function (err, client) {
-    assert.equal(null, err);
+    assert.equal(null, err)
     console.log("Connected successfully to server")
     const db = client.db(settings.dbName)
     const collection = db.collection('avaliacao');
