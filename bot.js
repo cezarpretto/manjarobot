@@ -140,7 +140,7 @@ bot.onText(/\/menu/, (msg) => {
     })
   }
   const userID = msg.from.id
-  bot.sendMessage(userID, 'Escolha uma Opção', opts).catch((error) => { bot.sendMessage(msg.chat.id, 'Ei ' + msg.from.first_name + ', ' + message.before) })
+  bot.sendMessage(msg.chat.id, 'Escolha uma Opção', opts).catch((error) => { bot.sendMessage(msg.chat.id, 'Ei ' + msg.from.first_name + ', ' + message.before) })
 })
 
 // Parte relacionada aos elogios
