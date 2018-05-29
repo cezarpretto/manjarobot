@@ -20,17 +20,17 @@ bot.on('left_chat_participant', (msg) => {
 
 bot.onText(/\/help/, (msg) => {
   const userID = msg.from.id
-  bot.sendMessage(userID, message.details, { parse_mode: 'Markdown' }).catch((error) => { bot.sendMessage(msg.chat.id, 'Ei ' + msg.from.first_name + ', ' + message.before) })
+  bot.sendMessage(msg.chat.id, message.details, { parse_mode: 'Markdown' }).catch((error) => { bot.sendMessage(msg.chat.id, 'Ei ' + msg.from.first_name + ', ' + message.before) })
 })
 
 bot.onText(/\/forum/, (msg) => {
   const userID = msg.from.id
-  bot.sendMessage(userID, message.forumLink, { parse_mode: 'Markdown' }).catch((error) => { bot.sendMessage(msg.chat.id, 'Ei ' + msg.from.first_name + ', ' + message.before) })
+  bot.sendMessage(msg.chat.id, message.forumLink, { parse_mode: 'Markdown' }).catch((error) => { bot.sendMessage(msg.chat.id, 'Ei ' + msg.from.first_name + ', ' + message.before) })
 })
 
 bot.onText(/\/instalacao/, (msg) => {
   const userID = msg.from.id
-  bot.sendMessage(userID, message.instalacaoLink, { parse_mode: 'Markdown' }).catch((error) => { bot.sendMessage(msg.chat.id, 'Ei ' + msg.from.first_name + ', ' + message.before) })
+  bot.sendMessage(msg.chat.id, message.instalacaoLink, { parse_mode: 'Markdown' }).catch((error) => { bot.sendMessage(msg.chat.id, 'Ei ' + msg.from.first_name + ', ' + message.before) })
 })
 
 bot.onText(/\/gnome/, (msg) => {
@@ -39,32 +39,32 @@ bot.onText(/\/gnome/, (msg) => {
 
 bot.onText(/\/grubrescue/, (msg) => {
   const userID = msg.from.id
-  bot.sendMessage(userID, message.grub).catch((error) => { bot.sendMessage(msg.chat.id, 'Ei ' + msg.from.first_name + ', ' + message.before) })
+  bot.sendMessage(msg.chat.id, message.grub).catch((error) => { bot.sendMessage(msg.chat.id, 'Ei ' + msg.from.first_name + ', ' + message.before) })
 })
 
 bot.onText(/\/mirror/, (msg) => {
   const userID = msg.from.id
-  bot.sendMessage(userID, message.mirror, { parse_mode: 'Markdown' }).catch((error) => { bot.sendMessage(msg.chat.id, 'Ei ' + msg.from.first_name + ', ' + message.before) })
+  bot.sendMessage(msg.chat.id, message.mirror, { parse_mode: 'Markdown' }).catch((error) => { bot.sendMessage(msg.chat.id, 'Ei ' + msg.from.first_name + ', ' + message.before) })
 })
 
 bot.onText(/\/comandosbasicos/, (msg) => {
   const userID = msg.from.id
-  bot.sendMessage(userID, message.comandosAnswer).catch((error) => { bot.sendMessage(msg.chat.id, 'Ei ' + msg.from.first_name + ', ' + message.before) })
+  bot.sendMessage(msg.chat.id, message.comandosAnswer).catch((error) => { bot.sendMessage(msg.chat.id, 'Ei ' + msg.from.first_name + ', ' + message.before) })
 })
 
 bot.onText(/\/regras/, (msg) => {
   const userID = msg.from.id
-  bot.sendMessage(userID, message.rules, { parse_mode: 'Markdown' }).catch((error) => { bot.sendMessage(msg.chat.id, 'Ei ' + msg.from.first_name + ', ' + message.before) })
+  bot.sendMessage(msg.chat.id, message.rules, { parse_mode: 'Markdown' }).catch((error) => { bot.sendMessage(msg.chat.id, 'Ei ' + msg.from.first_name + ', ' + message.before) })
 })
 
 bot.onText(/\/awesomelinux/, (msg) => {
   const userID = msg.from.id
-  bot.sendMessage(userID, message.aweLinks, { parse_mode: 'Markdown' }).catch((error) => { bot.sendMessage(msg.chat.id, 'Ei ' + msg.from.first_name + ', ' + message.before) })
+  bot.sendMessage(msg.chat.id, message.aweLinks, { parse_mode: 'Markdown' }).catch((error) => { bot.sendMessage(msg.chat.id, 'Ei ' + msg.from.first_name + ', ' + message.before) })
 })
 
 bot.onText(/\/kerneldriver/, (msg) => {
   const userID = msg.from.id
-  bot.sendMessage(userID, message.kernelLink, { parse_mode: 'Markdown' }).catch((error) => { bot.sendMessage(msg.chat.id, 'Ei ' + msg.from.first_name + ', ' + message.before) })
+  bot.sendMessage(msg.chat.id, message.kernelLink, { parse_mode: 'Markdown' }).catch((error) => { bot.sendMessage(msg.chat.id, 'Ei ' + msg.from.first_name + ', ' + message.before) })
 })
 
 bot.onText(/\/steam/, (msg) => {
@@ -98,7 +98,7 @@ bot.onText(/\/rollingrelease/, (msg, match) => {
     return data.map((el) => `${el.name}`)
   }).then((data) => {
     const userID = msg.from.id
-    bot.sendMessage(userID, data.join('\n')).catch((error) => { bot.sendMessage(msg.chat.id, 'Ei ' + msg.from.first_name + ', ' + message.before) })
+    bot.sendMessage(msg.chat.id, data.join('\n')).catch((error) => { bot.sendMessage(msg.chat.id, 'Ei ' + msg.from.first_name + ', ' + message.before) })
   }).catch((error) => {
     console.log(error)
   })
@@ -117,7 +117,7 @@ bot.onText(/\/rollingrelease/, (msg, match) => {
     return data.map((el) => `${el.name}`)
   }).then((data) => {
     const userID = msg.from.id
-    bot.sendMessage(userID, data.join('\n')).catch((error) => { bot.sendMessage(msg.chat.id, 'Ei ' + msg.from.first_name + ', ' + message.before) })
+    bot.sendMessage(msg.chat.id, data.join('\n')).catch((error) => { bot.sendMessage(msg.chat.id, 'Ei ' + msg.from.first_name + ', ' + message.before) })
   }).catch((error) => {
     console.log(error)
   })
