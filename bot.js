@@ -85,6 +85,10 @@ bot.onText(/\/form/, (msg) => {
   bot.sendMessage(msg.chat.id, message.form, { parse_mode: 'Markdown' })
 })
 
+bot.onText(/\/espaco/, (msg) => {
+  bot.sendMessage(msg.chat.id, message.espaco, { parse_mode: 'Markdown' })
+})
+
 
 bot.onText(/\/rollingrelease/, (msg, match) => {
   const urlTec = `https://manjaro.org/get-manjaro/`
