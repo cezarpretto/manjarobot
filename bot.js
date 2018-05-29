@@ -142,7 +142,7 @@ bot.onText(/\/menu/, (msg) => {
       keyboard: [
         ['/regras', '/help', '/steam'],
         ['/instalacao', '/rollingrelease'],
-        ['/rank'],
+        ['/rank', 'espaco'],
         ['/forum', '/kerneldriver'],
         ['/gnome', '/grubrescue'],
         ['/mirror', '/comandosbasicos'],
