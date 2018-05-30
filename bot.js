@@ -88,7 +88,6 @@ bot.onText(/\/espaco/, (msg) => {
   bot.sendMessage(msg.chat.id, message.espaco, { parse_mode: 'Markdown' })
 })
 
-
 bot.onText(/\/rollingrelease/, (msg, match) => {
   const urlTec = `https://manjaro.org/get-manjaro/`
   const urlTec2 = `https://manjaro.org/community-editions/`
@@ -170,7 +169,7 @@ bot.onText(/\/elogiar (.+)/, (msg, match) => {
       if (userNICK === user.slice(1, user.length)) {
         bot.sendMessage(chatID, message.autoElogio)
       } else if (user === '@manjarobrasilv2_bot') {
-        bot.sendMessage(chatID, 'Obrigado '+ userNICK + message.botElogio+ emoji.heart)
+        bot.sendMessage(chatID, 'Obrigado ' + userNICK + message.botElogio + emoji.heart)
       } else {
         commend(user)
         bot.sendMessage(chatID, message.enviaElogio)
@@ -191,9 +190,7 @@ bot.onText(/\/rank/, (msg) => {
   bestCommends(chatID)
 })
 
-
 ////////// FUNÇÕES DO BANCO DE DADOS
-
 // faz elogio ao usuário
 function commend(nick) {
   MongoClient.connect(settings.database, function (err, client) {
@@ -256,10 +253,8 @@ function bestCommends(chatID) {
       for (let index = 0; index < docs.length; index++) {
         const element = docs[index]
         console.log(element)
-
         text += element.nick + ': ' + element.commend + ' elogios.\n'
         console.log(text)
-
       }
       bot.sendMessage(chatID, String(text))
       client.close()

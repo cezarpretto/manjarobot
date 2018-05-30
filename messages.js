@@ -21,7 +21,7 @@ module.exports = {
   enviaElogio: 'Elogio Enviado! :D',
   semElogio: ' ainda não possui elogios',
   contaElogio: 'Quantidade de elogios de ',
-  botComandos: '/regras   \n /help \n /steam \n /espaco \n /instalacao \n /rollingrelease \n /rank \n /forum \n /kerneldriver \n /gnome \n /grubrescue \n /mirror \n /comandosbasicos \n /awesomelinux \n /arch',
+  botComandos: '/regras -  Exibe as regras do grupo  \n /help -  Exibe os responsáveis pelo grupo e pelo bot \n /steam - Exibe o link para o grupo na steam \n /espaco - Exibe guia de solução para o erro "Não há espaço no dispositivo" \n /instalacao - Exibe um guia para instalar o Manjaro \n /rollingrelease -  Exibe as versões atuais de cada DE \n /rank -  Exibe o rank do grupo \n /forum - Exibe link para o forum \n /kerneldriver - Exibe um tutorial para facil manuseio do kernel e drivers \n /gnome - Piada interna \n /grubrescue - Exibe tutorial para recuperar o grub \n /mirror -  Exibe comando para selecionar os melhores mirros \n /comandosbasicos - Exibe link que mostra como usar "pacman" e "yaourt" \n /awesomelinux - Exibe link que lista ótimos softwares para Linux \n /arch - Piada interna',
   erroElogio: 'Só é possível elogiar um usuário por vez e evite colocar texto junto ao comando de elogio.',
   botElogio: ' . Também amo você! '
 }
