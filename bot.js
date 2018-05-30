@@ -5,7 +5,7 @@ const message = require('./messages')
 const settings = require('./settings')
 const MongoClient = require('mongodb').MongoClient
 const assert = require('assert')
-
+var emoji = require('node-emoji').emoji
 
 const bot = new TelegramBot(settings.token, { polling: true })
 
@@ -170,7 +170,7 @@ bot.onText(/\/elogiar (.+)/, (msg, match) => {
       if (userNICK === user.slice(1, user.length)) {
         bot.sendMessage(chatID, message.autoElogio)
       } else if (user === '@manjarobrasilv2_bot') {
-        bot.sendMessage(chatID, 'Obrigado '+ userNICK + message.botElogio)
+        bot.sendMessage(chatID, 'Obrigado '+ userNICK + message.botElogio+ emoji.heart)
       } else {
         commend(user)
         bot.sendMessage(chatID, message.enviaElogio)
