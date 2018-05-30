@@ -136,7 +136,7 @@ bot.onText(/\/menu/, (msg) => {
   const opts = {
     reply_markup: JSON.stringify({
       resize_keyboard: true,
-      selective : true,
+      selective: true,
       one_time_keyboard: true,
       keyboard: [
         ['/regras', '/help', '/steam'],
@@ -154,7 +154,6 @@ bot.onText(/\/menu/, (msg) => {
 })
 
 // Parte relacionada aos elogios
-
 bot.onText(/\/elogiar (.+)/, (msg, match) => {
   const chatID = msg.chat.id
   const userID = msg.from.id
@@ -163,12 +162,21 @@ bot.onText(/\/elogiar (.+)/, (msg, match) => {
   if (chatID == userID) {
     bot.sendMessage(chatID, message.elogioGrupo)
   } else {
-    if (userNICK === user.slice(1, user.length)) {
-      bot.sendMessage(chatID, message.autoElogio)
+    var count1 = (user.match(/@/g) || []).length
+    var count2 = (user.match(/ /g) || []).length
+    if (count1 > 1 || count2 > 1) {
+      bot.sendMessage(chatID, message.erroElogio)
     } else {
-      commend(user)
-      bot.sendMessage(chatID, message.enviaElogio)
+      if (userNICK === user.slice(1, user.length)) {
+        bot.sendMessage(chatID, message.autoElogio)
+      } else if (user === '@manjarobrasilv2_bot') {
+        bot.sendMessage(chatID, 'Obrigado '+ userNICK + message.botElogio)
+      } else {
+        commend(user)
+        bot.sendMessage(chatID, message.enviaElogio)
+      }
     }
+
   }
 })
 
@@ -248,10 +256,10 @@ function bestCommends(chatID) {
       for (let index = 0; index < docs.length; index++) {
         const element = docs[index]
         console.log(element)
-        
+
         text += element.nick + ': ' + element.commend + ' elogios.\n'
         console.log(text)
-        
+
       }
       bot.sendMessage(chatID, String(text))
       client.close()
