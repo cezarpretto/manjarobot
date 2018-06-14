@@ -46,11 +46,6 @@ bot.onText(/\/mirror/, (msg) => {
   bot.sendMessage(msg.chat.id, message.mirror, { parse_mode: 'Markdown' }).catch((error) => { bot.sendMessage(msg.chat.id, 'Ei ' + msg.from.first_name + ', ' + message.before) })
 })
 
-bot.onText(/\/comandosbasicos/, (msg) => {
-  const userID = msg.from.id
-  bot.sendMessage(msg.chat.id, message.comandosAnswer).catch((error) => { bot.sendMessage(msg.chat.id, 'Ei ' + msg.from.first_name + ', ' + message.before) })
-})
-
 bot.onText(/\/regras/, (msg) => {
   const userID = msg.from.id
   bot.sendMessage(msg.chat.id, message.rules, { parse_mode: 'Markdown' }).catch((error) => { bot.sendMessage(msg.chat.id, 'Ei ' + msg.from.first_name + ', ' + message.before) })
@@ -67,11 +62,6 @@ bot.onText(/\/awesomelinux/, (msg) => {
   bot.sendMessage(msg.chat.id, message.aweLinks, { parse_mode: 'Markdown' }).catch((error) => { bot.sendMessage(msg.chat.id, 'Ei ' + msg.from.first_name + ', ' + message.before) })
 })
 
-bot.onText(/\/kerneldriver/, (msg) => {
-  const userID = msg.from.id
-  bot.sendMessage(msg.chat.id, message.kernelLink, { parse_mode: 'Markdown' }).catch((error) => { bot.sendMessage(msg.chat.id, 'Ei ' + msg.from.first_name + ', ' + message.before) })
-})
-
 bot.onText(/\/steam/, (msg) => {
   bot.sendMessage(msg.chat.id, message.steam, { parse_mode: 'Markdown' })
 })
@@ -86,6 +76,22 @@ bot.onText(/\/form/, (msg) => {
 
 bot.onText(/\/espaco/, (msg) => {
   bot.sendMessage(msg.chat.id, message.espaco, { parse_mode: 'Markdown' })
+})
+
+bot.onText(/\/kernel/, (msg) => {
+  bot.sendMessage(msg.chat.id, message.kernel, { parse_mode: 'Markdown' })
+})
+
+bot.onText(/\/drivers/, (msg) => {
+  bot.sendMessage(msg.chat.id, message.drivers, { parse_mode: 'Markdown' })
+})
+
+bot.onText(/\/pacman/, (msg) => {
+  bot.sendMessage(msg.chat.id, message.pacman, { parse_mode: 'Markdown' })
+})
+
+bot.onText(/\/pamacoctopi/, (msg) => {
+  bot.sendMessage(msg.chat.id, message.pamacoctopi, { parse_mode: 'Markdown' })
 })
 
 bot.onText(/\/rollingrelease/, (msg, match) => {
@@ -140,10 +146,10 @@ bot.onText(/\/menu/, (msg) => {
       keyboard: [
         ['/regras', '/help', '/steam'],
         ['/instalacao', '/rollingrelease'],
-        ['/rank', 'espaco'],
-        ['/forum', '/kerneldriver'],
+        ['/rank', '/espaco'],
+        ['/forum'],
         ['/gnome', '/grubrescue'],
-        ['/mirror', '/comandosbasicos'],
+        ['/mirror'],
         ['/awesomelinux', '/arch']
       ]
     })
@@ -219,7 +225,7 @@ function commend(nick) {
   })
 }
 
-// conta a quantidade de elogios de um usuário 
+// conta a quantidade de elogios de um usuário
 function countCommends(nick, chatID) {
   MongoClient.connect(settings.database, function (err, client) {
     assert.equal(null, err);
@@ -261,4 +267,3 @@ function bestCommends(chatID) {
     })
   })
 }
-

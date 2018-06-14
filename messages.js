@@ -5,10 +5,8 @@ module.exports = {
   gnomeAnswer: 'Ta sobrando RAM aí rapaz ? Caso contrário, teste uma das outras 11 versões do manjaro antes :)',
   grub: 'http://wiki.manjaro.org/index.php/Restore_the_GRUB_Bootloader',
   mirror: 'Digite:  \n ``` sudo pacman-mirrors -f 5 ``` \nEste comando irá encontrar os 05 melhores mirrors para download.',
-  comandosAnswer: 'https://manjarobrasil.wordpress.com/comandos-basicos/',
   rules: 'REGRAS DO GRUPO \n1- Offtopics são permitidos e encorajados, porém todo assunto tem hora e momento certo. Respeite os outros membros em seus momentos de dúvidas e evite spams desnecessários. \n2- Apenas divulgar outros grupos relacionados a Linux \n3- Não praticar spam \n5- Não desrespeitar membros \n6- Proíbido linkar clickbaits \n7- Procure sempre agregar valor ao grupo \n8- Use gnome ... (SQN) \n9- Sim, não existe regra 4 :)',
   aweLinks: 'https://github.com/luongvo209/Awesome-Linux-Software',
-  kernelLink: 'https://wiki.manjaro.org/index.php?title=Manjaro_Settings_Manager',
   steam: 'http://steamcommunity.com/groups/manjarobrasil',
   photoLink: 'https://i.redd.it/d4tarq65a94z.jpg',
   welcome: 'Bem vindo ao Manjaro Brasil!! \nConte-nos, que interface gráfica você usa ? \nUse /help ou /menu tenha ajuda do nosso bot :)',
@@ -23,5 +21,9 @@ module.exports = {
   contaElogio: 'Quantidade de elogios de ',
   botComandos: '/regras -  Exibe as regras do grupo  \n /help -  Exibe os responsáveis pelo grupo e pelo bot \n /steam - Exibe o link para o grupo na steam \n /espaco - Exibe guia de solução para o erro "Não há espaço no dispositivo" \n /instalacao - Exibe um guia para instalar o Manjaro \n /rollingrelease -  Exibe as versões atuais de cada DE \n /rank -  Exibe o rank do grupo \n /forum - Exibe link para o forum \n /kerneldriver - Exibe um tutorial para facil manuseio do kernel e drivers \n /gnome - Piada interna \n /grubrescue - Exibe tutorial para recuperar o grub \n /mirror -  Exibe comando para selecionar os melhores mirros \n /comandosbasicos - Exibe link que mostra como usar "pacman" e "yaourt" \n /awesomelinux - Exibe link que lista ótimos softwares para Linux \n /arch - Piada interna',
   erroElogio: 'Só é possível elogiar um usuário por vez e evite colocar texto junto ao comando de elogio.',
-  botElogio: ' . Também amo você! '
+  botElogio: ' . Também amo você! ',
+  kernel: 'https://sempreupdate.com.br/como-trocar-o-kernel-no-manjaro/',
+  drivers: 'https://sempreupdate.com.br/como-instalar-drivers-de-video-no-manjaro/',
+  pacman: 'https://sempreupdate.com.br/como-instalar-programas-pelo-terminal-no-manjaro-parte-1/',
+  pamacoctopi: 'https://sempreupdate.com.br/como-instalar-programas-facilmente-no-manjaro/'
 }
